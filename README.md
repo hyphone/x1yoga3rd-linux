@@ -10,9 +10,9 @@ When someone updates the BIOS through GNU/Linux now via fwupd (through Gnome Sof
 
 There is one issue though. When the EC is at 1.06 there are other issues like keyboard and trackpad not respondig after suspend and flickering keyboard backlight.
 
-What I encountered is when the BIOS is downgraded via Windows to 1.12 / 1.06, then updated via GNU/Linux to 1.27 / 1.06 (EC stays the same) and then updates the BIOS again in Windows to the newest 1.27 / 1.09 the fans are still working. And so is everything after suspend.
+What I encountered is when the BIOS is downgraded via Windows to 1.12 / 1.06, then updated via GNU/Linux to 1.27 / 1.06 (EC stays the same) and then the BIOS gets updated again through Windows to the newest 1.27 / 1.09 the fans are still working. And so is the keyboard, trackpad and keyboard backlight after suspend.
 
-So the procedure to have everything is this:
+So the procedure to have everything working is this:
 
 ## newest BIOS / EC and working fans
 - verify BIOS 1.12 with EC 10.6 is installed
