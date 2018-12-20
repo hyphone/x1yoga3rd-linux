@@ -25,16 +25,19 @@ So the procedure to have everything working is this:
 - update the BIOS to the newest version with Windows
   - you should now have the newest BIOS and the newest EC with working fans under GNU/Linux without the need of "thinkfan"
   
-## lower power consumtion while suspending (s2idle)
-- add this parameters to your grub config under GRUB_CMDLINE_LINUX_DEFAULT:
-  
-  ```acpi.ec_no_wakeup=1```
-
 ## prevent sudden wakeups from sleep
-I had some wakeups after putting the machine to sleep. I don't exactly know the cultprint but disabling XHC from the allowed wakeups helped and the X1Y3 sleeps like it should. This will disable the ability to wake the machine from USB devices I suppose. Some Users in the Thinkpad forums say that disabling the SD-card reader within the BIOS could have the same effect - as I haven't tested this, want to keep my SD card reader and don't wake my laptops through USB devices anyway, this is my solution.
+I had some wakeups after putting the machine to sleep. I don't exactly know the reason but disabling XHC from the allowed wakeups helped and the X1Y3 sleeps like it should. This will disable the ability to wake the machine from USB devices I suppose.
 
 - add this to a startup script:
   
   ```echo "XHC" > /proc/acpi/wakeup```
 
+## since Kernel 4.18 and the BIOS updated as stated above I couldn't find any other issue for now (state December 2018)
+- s2idle power consumption is acceptable
+- idle while power on consumes about 5+ watts
+- SD card reader does not consume useless power like users of the X1 Carbon 6 experience
+- GRUB parameter ```acpi.ec_no_wakeup=1``` is not needed anymore since Kernel 4.18 to prevent wakeups caused by the EC
+- touchpad / trackpoint / keyboard are working reliably after suspend
+
+## so back to work :)
 
