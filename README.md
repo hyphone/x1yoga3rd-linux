@@ -31,7 +31,8 @@ So the procedure to have everything working is this:
   ```acpi.ec_no_wakeup=1```
 
 ## prevent sudden wakeups from sleep
-I had some wakeups after putting the machine to sleep. I don't exactly know the cultprint but disabling XHC from the allowed wakeups helped and the X1Y3 sleeps like it should.
+I had some wakeups after putting the machine to sleep. I don't exactly know the cultprint but disabling XHC from the allowed wakeups helped and the X1Y3 sleeps like it should. This will disable the ability to wake the machine from USB devices I suppose. Some Users in the Thinkpad forums say that disabling the SD-card reader within the BIOS could have the same effect - as I haven't tested this, want to keep my SD card reader and don't wake my laptops through USB devices anyway, this is my solution.
+
 - add this to a startup script:
   
   ```echo "XHC" > /proc/acpi/wakeup```
