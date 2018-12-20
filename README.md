@@ -27,6 +27,13 @@ So the procedure to have everything working is this:
   
 ## lower power consumtion while suspending (s2idle)
 - add this parameters to your grub config under GRUB_CMDLINE_LINUX_DEFAULT:
-  acpi.ec_no_wakeup=1'
+  
+  ```acpi.ec_no_wakeup=1```
+
+## prevent sudden wakeups from sleep
+I had some wakeups after putting the machine to sleep. I don't exactly know the cultprint but disabling XHC from the allowed wakeups helped and the X1Y3 sleeps like it should.
+- add this to a startup script:
+  
+  ```echo "XHC" > /proc/acpi/wakeup```
 
 
