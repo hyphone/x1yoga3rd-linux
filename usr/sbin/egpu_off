@@ -1,0 +1,8 @@
+#!/bin/bash
+systemctl stop display-manager.service
+rmmod nvidia_modeset
+rmmod nvidia_uvm
+rmmod nvidia
+echo 1 > /sys/bus/pci/devices/0000:3f:00.0/remove
+echo 1 > /sys/bus/pci/devices/0000:40:00.0/remove
+systemctl start display-manager.service
