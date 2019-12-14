@@ -7,6 +7,7 @@ x1yoga3rd-linux
   - https://github.com/erpalma/throttled
 - thinkfan (shipped with most distros)
   - not needed but fans will rotate higher at high CPU temperatures (6,5k RPMs vs 4,8k RPMs) resulting in higher clock speeds
+- tlp
 
 ## What's in here?
 - configs for:
@@ -33,6 +34,7 @@ x1yoga3rd-linux
     - enable krstboot service
   - enables hibernation on Ubuntu
     - set the correct UUID of your swap in /etc/initramfs-tools/conf.d/resume
+  - tlp (sets CPU govenor to balance_power while on battery) to conserve power
 
 ## Set the default scaling factor to 1
 
