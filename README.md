@@ -13,8 +13,6 @@ x1yoga3rd-linux
 - configs for:
   - lenovo throttle fix
     - undervolting
-    - set HWP performance hints to "performance" when on high load and on AC
-      - I saw a segnificant better and constant performance while gaming for example
     - set cTDP to 25W while on AC
       - allows the CPU to consume more power
     - set cTDP to 15W while on battery
@@ -34,7 +32,9 @@ x1yoga3rd-linux
     - enable krstboot service
   - enables hibernation on Ubuntu
     - set the correct UUID of your swap in /etc/initramfs-tools/conf.d/resume
-  - tlp (sets CPU govenor to balance_power while on battery) to conserve power
+  - tlp
+      - sets CPU govenor to balance_power while on battery
+      - sets CPU govenor to performance while on AC
 
 ## Set the default scaling factor to 1
 

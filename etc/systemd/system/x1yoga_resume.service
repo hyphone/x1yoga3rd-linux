@@ -1,11 +1,11 @@
 [Unit]
-Description=KRSTBOOT: apply krst resume . . .
+Description=x1yoga_resume: apply x1yoga_resume . . .
 After=suspend.target
 
 [Service]
 User=root
 Type=simple
-ExecStart=/usr/sbin/krstresume
+ExecStart=/usr/sbin/x1yoga_resume
 
 [Install]
 WantedBy=suspend.target
